@@ -87,8 +87,8 @@ check_disk(){
         
         # If they exceed the timeout limit, make a best effort to load the tray
         # in the next steps
-        if [ $SLEEP_COUNT -ge $TIMEOUT ]; then
             echo "WARNING: TIMEOUT Exceeded and no mount detected!"
+        if [ $SLEEP_COUNT -ge $TIMEOUT ]; then
             break
         fi
     done
@@ -132,8 +132,8 @@ cleanup(){
 failed(){
     echo "$1"
     echo "Attempting to clean up ..."
-    cleanup
-    exit 1
+   cleanup
+   exit 1
 }
 
 if [ -e "$1" ]; then
